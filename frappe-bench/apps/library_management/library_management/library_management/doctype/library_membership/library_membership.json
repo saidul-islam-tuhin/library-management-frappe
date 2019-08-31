@@ -1,0 +1,96 @@
+{
+ "creation": "2019-08-30 01:47:37.241397",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "library_member",
+  "member_first_name",
+  "member_last_name",
+  "form_date",
+  "to_date",
+  "paid"
+ ],
+ "fields": [
+  {
+   "fieldname": "library_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Library Member",
+   "options": "Library Member",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "library_member.first_name",
+   "fieldname": "member_first_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Member First Name",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "library_member.last_name",
+   "fieldname": "member_last_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Member Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "form_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Form Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "paid",
+   "fieldtype": "Check",
+   "label": "Paid",
+   "reqd": 1
+  }
+ ],
+ "modified": "2019-08-30 14:09:08.083829",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Library Membership",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Librarian",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "member_first_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,17 @@
+
+<div class="row">
+    <h1>Articles</h1>
+    <div class="col-sm-4">
+        <a href="/Article/{{ doc.name }}">
+            <img src="{{ doc.image }}"
+                class="img-responsive" style="max-height: 200px">
+        </a>
+    </div>
+    <div class="col-sm-4">
+        <a href="/Article/{{ doc.name }}"><h4>{{ doc.article_name }}</h4></a>
+        <p>{{ doc.author }}</p>
+        <p>{{ (doc.description[:200] + "...")
+            if doc.description|len > 200 else doc.description }}</p>
+        <p class="text-muted">Publisher: {{ doc.publisher }}</p>
+    </div>
+</div>
